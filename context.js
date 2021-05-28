@@ -47,6 +47,7 @@ function Animal(name, species, food) {
 }
 
 //Code Here
+const animal1 = new Animal('Gary', 'albatross', 'fish');
 
 
 
@@ -67,6 +68,10 @@ let who = {
 }
 
 //Code Here
+const whoSaysHi = sayHi.bind(who, 'ALOHA');
+whoSaysHi();
+
+
 
 ////////// PROBLEM 4 //////////
 
@@ -79,7 +84,7 @@ function whatIsThis() {
 }
 
 // uncomment the line below and tell us what the context of "this" is for whatIsThis()
-//let context1 = ???
+let context1 = 'default'
 
 let product = {
   name: 'snake plant',
@@ -91,7 +96,7 @@ let product = {
 let func = whatIsThis.bind(product)
 
 // uncomment the line below and tell us what the context of "this" is when we invoke func
-//let context2 = ???
+let context2 = 'explicit'
 
 let vacation = {
   location: 'Hawaii',
@@ -102,7 +107,7 @@ let vacation = {
 }
 
 // uncomment the line below and tell us what the context of "this" is when we invoke vacation.whatIsThis
-//let context3 = ???
+let context3 = 'implicit'
 
 function Family(numParents, numKids, numPets) {
   this.numParents = numParents
@@ -117,4 +122,4 @@ function Family(numParents, numKids, numPets) {
 let family1 = new Family(2, 4, 1)
 
 // uncomment the line below and tell us what the context of "this" is for the instance of Family created above.
-// let context4 = ???
+ let context4 = 'implicit'
